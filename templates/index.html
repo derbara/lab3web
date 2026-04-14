@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow p-4 text-center">
+    <h2 class="mb-3"> Главная</h2>
+
+    {% if current_user.is_authenticated %} <!--Проверка авторизации-->
+        <p class="fs-5">Вы вошли как <b>{{ current_user.id }}</b></p>
+    {% else %}
+        <p class="fs-5 text-muted">Вы не авторизованы</p>
+    {% endif %}
+</div>
+{% endblock %}

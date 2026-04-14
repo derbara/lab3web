@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow p-4 mx-auto" style="max-width: 400px;">
+    <h3 class="text-center mb-4"> Вход</h3>
+
+    <form method="POST"> <!--форма отправляет данные на сервер-->
+        <div class="mb-3"><!--поле логина-->
+            <input type="text" class="form-control" name="username" placeholder="Логин" required>
+        </div>
+
+        <div class="mb-3"><!--поле пароля-->
+            <input type="password" class="form-control" name="password" placeholder="Пароль" required>
+        </div>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" name="remember">
+            <label class="form-check-label">
+                Запомнить меня
+            </label>
+        </div>
+
+        <button class="btn btn-primary w-100">Войти</button>
+    </form>
+</div>
+{% endblock %}
